@@ -3,27 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3E6B44A7264013A400046C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44A6264013A400046C97 /* AppDelegate.swift */; };
 		3E6B44A9264013A400046C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44A8264013A400046C97 /* SceneDelegate.swift */; };
-		3E6B44AB264013A400046C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44AA264013A400046C97 /* ViewController.swift */; };
+		3E6B44AB264013A400046C97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44AA264013A400046C97 /* MainViewController.swift */; };
 		3E6B44AE264013A400046C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B44AC264013A400046C97 /* Main.storyboard */; };
 		3E6B44B0264013A600046C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B44AF264013A600046C97 /* Assets.xcassets */; };
 		3E6B44B3264013A600046C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B44B1264013A600046C97 /* LaunchScreen.storyboard */; };
+		3E6B44BD264014FE00046C97 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44BC264014FE00046C97 /* UIViewController+Extension.swift */; };
+		3E6B44BF2640152F00046C97 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44BE2640152F00046C97 /* UIScrollView+Extension.swift */; };
+		3E6B44C12640155A00046C97 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44C02640155A00046C97 /* UITableView+Extension.swift */; };
+		3E6B44C32640158300046C97 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44C22640158300046C97 /* UITableViewCell+Extension.swift */; };
+		3E6B44C5264015C400046C97 /* UIStoryBoard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44C4264015C400046C97 /* UIStoryBoard+Extension.swift */; };
+		3E6B44C726401CBB00046C97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B44C626401CBB00046C97 /* GoogleService-Info.plist */; };
+		3E6B44CC2641A80700046C97 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44CB2641A80700046C97 /* LocationManager.swift */; };
+		3E6B44D02641B7FC00046C97 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44CE2641B7FC00046C97 /* MainCollectionViewCell.swift */; };
+		3E6B44D12641B7FC00046C97 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6B44CF2641B7FC00046C97 /* MainCollectionViewCell.xib */; };
+		3E6B44D32641B8DF00046C97 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44D22641B8DF00046C97 /* UICollectionViewCell+Extension.swift */; };
+		3E6B44D52641B90000046C97 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44D42641B90000046C97 /* UICollectionView+Extension.swift */; };
+		3E7C2750264281100075D064 /* PrayerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C274E264281100075D064 /* PrayerListCollectionViewCell.swift */; };
+		3E7C2751264281100075D064 /* PrayerListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E7C274F264281100075D064 /* PrayerListCollectionViewCell.xib */; };
+		3E7C275426428BE80075D064 /* PrayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C275326428BE80075D064 /* PrayerManager.swift */; };
+		3E9D07AA264A81100096CAF0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECCBEAC2647D55D00C7A324 /* WidgetKit.framework */; };
+		3E9D07AB264A81100096CAF0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECCBEAE2647D55D00C7A324 /* SwiftUI.framework */; };
+		3E9D07AE264A81100096CAF0 /* PrayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07AD264A81100096CAF0 /* PrayerWidget.swift */; };
+		3E9D07B0264A81120096CAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E9D07AF264A81120096CAF0 /* Assets.xcassets */; };
+		3E9D07B4264A81120096CAF0 /* PrayerWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3E9D07A9264A81100096CAF0 /* PrayerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3E9D07BC264A84C20096CAF0 /* PrayerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07BB264A84C10096CAF0 /* PrayerEntry.swift */; };
+		3E9D07BE264A86530096CAF0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07BD264A86530096CAF0 /* Provider.swift */; };
+		3E9D07C1264A86DE0096CAF0 /* PWSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */; };
+		3E9D07C3264A86FC0096CAF0 /* PWMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */; };
+		3E9D07C5264ABE330096CAF0 /* PrayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C275326428BE80075D064 /* PrayerManager.swift */; };
+		5FA7910BF9011E6D039A805B /* Pods_PrayerWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA0032F05A602631EEF4725 /* Pods_PrayerWidgetExtension.framework */; };
+		ED03D1CDEF05475434C8157B /* Pods_oneaday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6301739619EE67EF6A459702 /* Pods_oneaday.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E9D07B2264A81120096CAF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E6B449B264013A400046C97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E9D07A8264A81100096CAF0;
+			remoteInfo = PrayerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3ECCBEBC2647D56100C7A324 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3E9D07B4264A81120096CAF0 /* PrayerWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C7DEFB4AA6D32EA0AB2F69A /* Pods-oneaday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneaday.release.xcconfig"; path = "Target Support Files/Pods-oneaday/Pods-oneaday.release.xcconfig"; sourceTree = "<group>"; };
 		3E6B44A3264013A400046C97 /* oneaday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneaday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6B44A6264013A400046C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E6B44A8264013A400046C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E6B44AA264013A400046C97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E6B44AA264013A400046C97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3E6B44AD264013A400046C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E6B44AF264013A600046C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E6B44B2264013A600046C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E6B44B4264013A600046C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E6B44BC264014FE00046C97 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44BE2640152F00046C97 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44C02640155A00046C97 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44C22640158300046C97 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44C4264015C400046C97 /* UIStoryBoard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44C626401CBB00046C97 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E6B44CB2641A80700046C97 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3E6B44CE2641B7FC00046C97 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E6B44CF2641B7FC00046C97 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E6B44D22641B8DF00046C97 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		3E6B44D42641B90000046C97 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		3E786C262BEE35E08998FE3E /* Pods-PrayerWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-PrayerWidgetExtension/Pods-PrayerWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		3E7C274E264281100075D064 /* PrayerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerListCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E7C274F264281100075D064 /* PrayerListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerListCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E7C275326428BE80075D064 /* PrayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerManager.swift; sourceTree = "<group>"; };
+		3E9D07A9264A81100096CAF0 /* PrayerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PrayerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9D07AD264A81100096CAF0 /* PrayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerWidget.swift; sourceTree = "<group>"; };
+		3E9D07AF264A81120096CAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E9D07B1264A81120096CAF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E9D07BB264A84C10096CAF0 /* PrayerEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerEntry.swift; sourceTree = "<group>"; };
+		3E9D07BD264A86530096CAF0 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWSmallView.swift; sourceTree = "<group>"; };
+		3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMediumView.swift; sourceTree = "<group>"; };
+		3ECCBEAC2647D55D00C7A324 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3ECCBEAE2647D55D00C7A324 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6301739619EE67EF6A459702 /* Pods_oneaday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneaday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA0032F05A602631EEF4725 /* Pods_PrayerWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78974E898DE9BB25ECA86116 /* Pods-oneaday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oneaday.debug.xcconfig"; path = "Target Support Files/Pods-oneaday/Pods-oneaday.debug.xcconfig"; sourceTree = "<group>"; };
+		E835D4B0EC373CF95F118004 /* Pods-PrayerWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-PrayerWidgetExtension/Pods-PrayerWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +111,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED03D1CDEF05475434C8157B /* Pods_oneaday.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E9D07A6264A81100096CAF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9D07AB264A81100096CAF0 /* SwiftUI.framework in Frameworks */,
+				3E9D07AA264A81100096CAF0 /* WidgetKit.framework in Frameworks */,
+				5FA7910BF9011E6D039A805B /* Pods_PrayerWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				3E6B44A5264013A400046C97 /* oneaday */,
+				3E9D07AC264A81100096CAF0 /* PrayerWidget */,
 				3E6B44A4264013A400046C97 /* Products */,
+				91B20CC0C8BB3E0B5A4CB367 /* Pods */,
+				9D4577CECECA36B2A0955410 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				3E6B44A3264013A400046C97 /* oneaday.app */,
+				3E9D07A9264A81100096CAF0 /* PrayerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +151,121 @@
 		3E6B44A5264013A400046C97 /* oneaday */ = {
 			isa = PBXGroup;
 			children = (
-				3E6B44A6264013A400046C97 /* AppDelegate.swift */,
-				3E6B44A8264013A400046C97 /* SceneDelegate.swift */,
-				3E6B44AA264013A400046C97 /* ViewController.swift */,
-				3E6B44AC264013A400046C97 /* Main.storyboard */,
-				3E6B44AF264013A600046C97 /* Assets.xcassets */,
-				3E6B44B1264013A600046C97 /* LaunchScreen.storyboard */,
-				3E6B44B4264013A600046C97 /* Info.plist */,
+				3E7C275226428BD00075D064 /* PrayerManager */,
+				3E6B44CA2641A79000046C97 /* LocationManager */,
+				3E6B44C82641A38800046C97 /* Main */,
+				3E6B44BB264014E900046C97 /* Extensions */,
+				3E6B44BA264013EC00046C97 /* AppUtils */,
 			);
 			path = oneaday;
+			sourceTree = "<group>";
+		};
+		3E6B44BA264013EC00046C97 /* AppUtils */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B44A6264013A400046C97 /* AppDelegate.swift */,
+				3E6B44A8264013A400046C97 /* SceneDelegate.swift */,
+				3E6B44B1264013A600046C97 /* LaunchScreen.storyboard */,
+				3E6B44AF264013A600046C97 /* Assets.xcassets */,
+				3E6B44B4264013A600046C97 /* Info.plist */,
+				3E6B44C626401CBB00046C97 /* GoogleService-Info.plist */,
+			);
+			path = AppUtils;
+			sourceTree = "<group>";
+		};
+		3E6B44BB264014E900046C97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B44BC264014FE00046C97 /* UIViewController+Extension.swift */,
+				3E6B44BE2640152F00046C97 /* UIScrollView+Extension.swift */,
+				3E6B44C02640155A00046C97 /* UITableView+Extension.swift */,
+				3E6B44C22640158300046C97 /* UITableViewCell+Extension.swift */,
+				3E6B44C4264015C400046C97 /* UIStoryBoard+Extension.swift */,
+				3E6B44D22641B8DF00046C97 /* UICollectionViewCell+Extension.swift */,
+				3E6B44D42641B90000046C97 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E6B44C82641A38800046C97 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B44CD2641B7CF00046C97 /* Cells */,
+				3E6B44AA264013A400046C97 /* MainViewController.swift */,
+				3E6B44AC264013A400046C97 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3E6B44CA2641A79000046C97 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B44CB2641A80700046C97 /* LocationManager.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		3E6B44CD2641B7CF00046C97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B44CE2641B7FC00046C97 /* MainCollectionViewCell.swift */,
+				3E6B44CF2641B7FC00046C97 /* MainCollectionViewCell.xib */,
+				3E7C274E264281100075D064 /* PrayerListCollectionViewCell.swift */,
+				3E7C274F264281100075D064 /* PrayerListCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E7C275226428BD00075D064 /* PrayerManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E7C275326428BE80075D064 /* PrayerManager.swift */,
+			);
+			path = PrayerManager;
+			sourceTree = "<group>";
+		};
+		3E9D07AC264A81100096CAF0 /* PrayerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3E9D07BF264A86B20096CAF0 /* WidgetInterface */,
+				3E9D07AD264A81100096CAF0 /* PrayerWidget.swift */,
+				3E9D07AF264A81120096CAF0 /* Assets.xcassets */,
+				3E9D07B1264A81120096CAF0 /* Info.plist */,
+				3E9D07BB264A84C10096CAF0 /* PrayerEntry.swift */,
+				3E9D07BD264A86530096CAF0 /* Provider.swift */,
+			);
+			path = PrayerWidget;
+			sourceTree = "<group>";
+		};
+		3E9D07BF264A86B20096CAF0 /* WidgetInterface */ = {
+			isa = PBXGroup;
+			children = (
+				3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */,
+				3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */,
+			);
+			path = WidgetInterface;
+			sourceTree = "<group>";
+		};
+		91B20CC0C8BB3E0B5A4CB367 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78974E898DE9BB25ECA86116 /* Pods-oneaday.debug.xcconfig */,
+				2C7DEFB4AA6D32EA0AB2F69A /* Pods-oneaday.release.xcconfig */,
+				3E786C262BEE35E08998FE3E /* Pods-PrayerWidgetExtension.debug.xcconfig */,
+				E835D4B0EC373CF95F118004 /* Pods-PrayerWidgetExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D4577CECECA36B2A0955410 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6301739619EE67EF6A459702 /* Pods_oneaday.framework */,
+				3ECCBEAC2647D55D00C7A324 /* WidgetKit.framework */,
+				3ECCBEAE2647D55D00C7A324 /* SwiftUI.framework */,
+				6FA0032F05A602631EEF4725 /* Pods_PrayerWidgetExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,18 +275,40 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E6B44B7264013A600046C97 /* Build configuration list for PBXNativeTarget "oneaday" */;
 			buildPhases = (
+				EBF0B487B25CEABB1CE3E20E /* [CP] Check Pods Manifest.lock */,
 				3E6B449F264013A400046C97 /* Sources */,
 				3E6B44A0264013A400046C97 /* Frameworks */,
 				3E6B44A1264013A400046C97 /* Resources */,
+				51A888DE335CDCAC6E3DFBD5 /* [CP] Embed Pods Frameworks */,
+				3ECCBEBC2647D56100C7A324 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3E9D07B3264A81120096CAF0 /* PBXTargetDependency */,
 			);
 			name = oneaday;
 			productName = oneaday;
 			productReference = 3E6B44A3264013A400046C97 /* oneaday.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3E9D07A8264A81100096CAF0 /* PrayerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E9D07B5264A81120096CAF0 /* Build configuration list for PBXNativeTarget "PrayerWidgetExtension" */;
+			buildPhases = (
+				CBA72FD2A35F9057578F0CE5 /* [CP] Check Pods Manifest.lock */,
+				3E9D07A5264A81100096CAF0 /* Sources */,
+				3E9D07A6264A81100096CAF0 /* Frameworks */,
+				3E9D07A7264A81100096CAF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrayerWidgetExtension;
+			productName = PrayerWidgetExtension;
+			productReference = 3E9D07A9264A81100096CAF0 /* PrayerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +320,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					3E6B44A2264013A400046C97 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					3E9D07A8264A81100096CAF0 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -115,6 +341,7 @@
 			projectRoot = "";
 			targets = (
 				3E6B44A2264013A400046C97 /* oneaday */,
+				3E9D07A8264A81100096CAF0 /* PrayerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -125,25 +352,132 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6B44B3264013A600046C97 /* LaunchScreen.storyboard in Resources */,
+				3E6B44C726401CBB00046C97 /* GoogleService-Info.plist in Resources */,
+				3E7C2751264281100075D064 /* PrayerListCollectionViewCell.xib in Resources */,
 				3E6B44B0264013A600046C97 /* Assets.xcassets in Resources */,
+				3E6B44D12641B7FC00046C97 /* MainCollectionViewCell.xib in Resources */,
 				3E6B44AE264013A400046C97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E9D07A7264A81100096CAF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9D07B0264A81120096CAF0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51A888DE335CDCAC6E3DFBD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oneaday/Pods-oneaday-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oneaday/Pods-oneaday-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oneaday/Pods-oneaday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBA72FD2A35F9057578F0CE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrayerWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBF0B487B25CEABB1CE3E20E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oneaday-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E6B449F264013A400046C97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E6B44AB264013A400046C97 /* ViewController.swift in Sources */,
+				3E6B44D52641B90000046C97 /* UICollectionView+Extension.swift in Sources */,
+				3E6B44C32640158300046C97 /* UITableViewCell+Extension.swift in Sources */,
+				3E7C2750264281100075D064 /* PrayerListCollectionViewCell.swift in Sources */,
+				3E6B44BD264014FE00046C97 /* UIViewController+Extension.swift in Sources */,
+				3E6B44AB264013A400046C97 /* MainViewController.swift in Sources */,
 				3E6B44A7264013A400046C97 /* AppDelegate.swift in Sources */,
 				3E6B44A9264013A400046C97 /* SceneDelegate.swift in Sources */,
+				3E6B44BF2640152F00046C97 /* UIScrollView+Extension.swift in Sources */,
+				3E6B44C5264015C400046C97 /* UIStoryBoard+Extension.swift in Sources */,
+				3E6B44D02641B7FC00046C97 /* MainCollectionViewCell.swift in Sources */,
+				3E7C275426428BE80075D064 /* PrayerManager.swift in Sources */,
+				3E6B44C12640155A00046C97 /* UITableView+Extension.swift in Sources */,
+				3E6B44CC2641A80700046C97 /* LocationManager.swift in Sources */,
+				3E6B44D32641B8DF00046C97 /* UICollectionViewCell+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E9D07A5264A81100096CAF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9D07AE264A81100096CAF0 /* PrayerWidget.swift in Sources */,
+				3E9D07BE264A86530096CAF0 /* Provider.swift in Sources */,
+				3E9D07C3264A86FC0096CAF0 /* PWMediumView.swift in Sources */,
+				3E9D07BC264A84C20096CAF0 /* PrayerEntry.swift in Sources */,
+				3E9D07C5264ABE330096CAF0 /* PrayerManager.swift in Sources */,
+				3E9D07C1264A86DE0096CAF0 /* PWSmallView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E9D07B3264A81120096CAF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E9D07A8264A81100096CAF0 /* PrayerWidgetExtension */;
+			targetProxy = 3E9D07B2264A81120096CAF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3E6B44AC264013A400046C97 /* Main.storyboard */ = {
@@ -216,7 +550,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +606,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,37 +619,89 @@
 		};
 		3E6B44B8264013A600046C97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78974E898DE9BB25ECA86116 /* Pods-oneaday.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
-				INFOPLIST_FILE = oneaday/Info.plist;
+				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uxbert.oneaday;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3E6B44B9264013A600046C97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C7DEFB4AA6D32EA0AB2F69A /* Pods-oneaday.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
-				INFOPLIST_FILE = oneaday/Info.plist;
+				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uxbert.oneaday;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3E9D07B6264A81120096CAF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E786C262BEE35E08998FE3E /* Pods-PrayerWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PGNALUY6R;
+				INFOPLIST_FILE = PrayerWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day.PrayerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E9D07B7264A81120096CAF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E835D4B0EC373CF95F118004 /* Pods-PrayerWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9PGNALUY6R;
+				INFOPLIST_FILE = PrayerWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day.PrayerWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +724,15 @@
 			buildConfigurations = (
 				3E6B44B8264013A600046C97 /* Debug */,
 				3E6B44B9264013A600046C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E9D07B5264A81120096CAF0 /* Build configuration list for PBXNativeTarget "PrayerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E9D07B6264A81120096CAF0 /* Debug */,
+				3E9D07B7264A81120096CAF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
