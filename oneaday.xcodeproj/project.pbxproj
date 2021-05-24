@@ -37,6 +37,10 @@
 		3E9D07C1264A86DE0096CAF0 /* PWSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */; };
 		3E9D07C3264A86FC0096CAF0 /* PWMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */; };
 		3E9D07C5264ABE330096CAF0 /* PrayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C275326428BE80075D064 /* PrayerManager.swift */; };
+		3EA72BB32654EC8700D68AA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA72BB22654EC8700D68AA4 /* Constants.swift */; };
+		3EA72BB42654EC8700D68AA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA72BB22654EC8700D68AA4 /* Constants.swift */; };
+		3EA72BB52654F28000D68AA4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B44CB2641A80700046C97 /* LocationManager.swift */; };
+		3EA72BB7265694C800D68AA4 /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA72BB6265694C800D68AA4 /* PrayerTimeView.swift */; };
 		5FA7910BF9011E6D039A805B /* Pods_PrayerWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA0032F05A602631EEF4725 /* Pods_PrayerWidgetExtension.framework */; };
 		ED03D1CDEF05475434C8157B /* Pods_oneaday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6301739619EE67EF6A459702 /* Pods_oneaday.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +102,8 @@
 		3E9D07BD264A86530096CAF0 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWSmallView.swift; sourceTree = "<group>"; };
 		3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMediumView.swift; sourceTree = "<group>"; };
+		3EA72BB22654EC8700D68AA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3EA72BB6265694C800D68AA4 /* PrayerTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeView.swift; sourceTree = "<group>"; };
 		3ECCBEAC2647D55D00C7A324 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3ECCBEAE2647D55D00C7A324 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6301739619EE67EF6A459702 /* Pods_oneaday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oneaday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,7 @@
 				3E6B44AF264013A600046C97 /* Assets.xcassets */,
 				3E6B44B4264013A600046C97 /* Info.plist */,
 				3E6B44C626401CBB00046C97 /* GoogleService-Info.plist */,
+				3EA72BB22654EC8700D68AA4 /* Constants.swift */,
 			);
 			path = AppUtils;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 			children = (
 				3E9D07C0264A86DE0096CAF0 /* PWSmallView.swift */,
 				3E9D07C2264A86FC0096CAF0 /* PWMediumView.swift */,
+				3EA72BB6265694C800D68AA4 /* PrayerTimeView.swift */,
 			);
 			path = WidgetInterface;
 			sourceTree = "<group>";
@@ -444,6 +452,7 @@
 				3E7C2750264281100075D064 /* PrayerListCollectionViewCell.swift in Sources */,
 				3E6B44BD264014FE00046C97 /* UIViewController+Extension.swift in Sources */,
 				3E6B44AB264013A400046C97 /* MainViewController.swift in Sources */,
+				3EA72BB32654EC8700D68AA4 /* Constants.swift in Sources */,
 				3E6B44A7264013A400046C97 /* AppDelegate.swift in Sources */,
 				3E6B44A9264013A400046C97 /* SceneDelegate.swift in Sources */,
 				3E6B44BF2640152F00046C97 /* UIScrollView+Extension.swift in Sources */,
@@ -464,8 +473,11 @@
 				3E9D07BE264A86530096CAF0 /* Provider.swift in Sources */,
 				3E9D07C3264A86FC0096CAF0 /* PWMediumView.swift in Sources */,
 				3E9D07BC264A84C20096CAF0 /* PrayerEntry.swift in Sources */,
+				3EA72BB52654F28000D68AA4 /* LocationManager.swift in Sources */,
+				3EA72BB42654EC8700D68AA4 /* Constants.swift in Sources */,
 				3E9D07C5264ABE330096CAF0 /* PrayerManager.swift in Sources */,
 				3E9D07C1264A86DE0096CAF0 /* PWSmallView.swift in Sources */,
+				3EA72BB7265694C800D68AA4 /* PrayerTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +637,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
 				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,6 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
 				INFOPLIST_FILE = oneaday/AppUtils/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,6 +682,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
 				INFOPLIST_FILE = PrayerWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -676,11 +692,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day.PrayerWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -691,6 +708,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9PGNALUY6R;
 				INFOPLIST_FILE = PrayerWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -699,11 +718,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "uxbert.One-a-Day.PrayerWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

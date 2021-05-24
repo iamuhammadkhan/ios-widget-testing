@@ -32,6 +32,10 @@ final class PrayerManager: NSObject {
         return formatter.string(from: date)
     }
     
+    func getNextPrayerRemainingSeconds(_ date: Date) -> DateComponents {
+        return Calendar.current.dateComponents([.second], from: Date(), to: date)
+    }
+    
     func getNextPrayerRemainingTime(_ date: Date) -> DateComponents {
         return Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: date)
     }

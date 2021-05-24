@@ -34,6 +34,8 @@ struct PrayerWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             PrayerWidgetEntryView(entry: entry)
         }
+        .configurationDisplayName("Prayer Timings")
+        .description("Quickly access prayer timings and next upcoming prayer")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

@@ -40,10 +40,10 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-x1-hm9" userLabel="Share">
-                                <rect key="frame" x="364" y="44" width="30" height="30"/>
+                                <rect key="frame" x="370" y="48" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="UKj-Bu-x7o"/>
-                                    <constraint firstAttribute="height" constant="30" id="boy-OZ-HOU"/>
+                                    <constraint firstAttribute="width" constant="24" id="UKj-Bu-x7o"/>
+                                    <constraint firstAttribute="height" constant="24" id="boy-OZ-HOU"/>
                                 </constraints>
                                 <state key="normal" image="share_icon"/>
                                 <connections>
@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
                             <constraint firstItem="QeK-iy-gwI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1wf-fC-DMX"/>
-                            <constraint firstItem="Fj1-x1-hm9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BDk-aq-mdk"/>
+                            <constraint firstItem="Fj1-x1-hm9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="BDk-aq-mdk"/>
                             <constraint firstItem="qu4-Aj-6qP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DaK-wf-jqB"/>
                             <constraint firstItem="QeK-iy-gwI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Grg-8f-ufj"/>
                             <constraint firstAttribute="bottom" secondItem="qu4-Aj-6qP" secondAttribute="bottom" id="Igj-lw-x4Q"/>

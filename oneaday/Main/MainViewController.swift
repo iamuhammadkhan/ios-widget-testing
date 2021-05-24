@@ -7,12 +7,14 @@
 
 import UIKit
 import CoreLocation
+import WidgetKit
 import Adhan
 
 final class MainViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    private lazy var nextPrayerDate: Date? = nil
     private lazy var timeRemaining: DateComponents? = nil
     private lazy var currentLocation: String? = nil
     private lazy var nextPrayerTime: String? = nil
@@ -44,7 +46,7 @@ extension MainViewController: LocationManagerDelegate {
         if let prayerTimes = PrayerManager.shared.getPrayers(location) {
             prayers = prayerTimes
             nextPrayer = prayers?.nextPrayer()
-            let nextPrayerDate = prayers?.time(for: nextPrayer ?? Prayer.fajr)
+            nextPrayerDate = prayers?.time(for: nextPrayer ?? Prayer.fajr)
             nextPrayerTime = PrayerManager.shared.getPrayerTimeString(nextPrayerDate!)
             
             print("Countdown:", nextPrayerDate)
@@ -55,6 +57,7 @@ extension MainViewController: LocationManagerDelegate {
             self?.currentLocation = location
             self?.collectionView.reloadData()
         }
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     func authorizationSuccess() {
@@ -62,6 +65,7 @@ extension MainViewController: LocationManagerDelegate {
     }
     
     func authorizationFailed() {
+        WidgetCenter.shared.reloadAllTimelines()
         showLocationAlert()
     }
 }
@@ -77,18 +81,19 @@ extension MainViewController: UICollectionViewDataSource {
             if let nextPrayer = nextPrayer, let nextPrayerTime = nextPrayerTime {
                 cell.backgroundImageView.image = UIImage(named: "\(nextPrayer)")
                 cell.nextPrayerTimeLabel.text = "at \(nextPrayerTime)"
-                cell.nextPrayerNameLabel.text = "until \(nextPrayer)".capitalized
-                cell.countDownToNextPrayerLabel.text = "\(timeRemaining?.hour ?? 0)hr \(timeRemaining?.minute ?? 0)min \(timeRemaining?.second ?? 0)sec"
+                let prayerName = "\(nextPrayer)".capitalized
+                cell.nextPrayerNameLabel.text = "until \(prayerName)"
+                cell.createTimer(nextPrayerDate ?? Date())
             } else if let prayers = prayers {
                 let nextPrayerDate = prayers.time(for: Prayer.fajr)
                 let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: nextPrayerDate)!
                 let nextPrayerTime = PrayerManager.shared.getPrayerTimeString(nextDate)
-                let timeRemaining = PrayerManager.shared.getNextPrayerRemainingTime(nextDate)
                 
                 cell.backgroundImageView.image = UIImage(named: "\(Prayer.fajr)")
                 cell.nextPrayerTimeLabel.text = "at \(nextPrayerTime)"
-                cell.nextPrayerNameLabel.text = "until \(Prayer.fajr)".capitalized
-                cell.countDownToNextPrayerLabel.text = "\(timeRemaining.hour ?? 0)hr \(timeRemaining.minute ?? 0)min \(timeRemaining.second ?? 0)sec"
+                let prayerName = "\(Prayer.fajr)".capitalized
+                cell.nextPrayerNameLabel.text = "until \(prayerName)"
+                cell.createTimer(nextDate)
             }
             return cell
         }
@@ -104,16 +109,17 @@ extension MainViewController: UICollectionViewDataSource {
             cell.addressLabel.text = currentLocation
             if let nextPrayer = nextPrayer {
                 cell.backgroundImageView.image = UIImage(named: "\(nextPrayer)")
-                cell.nextPrayerNameLabel.text = "until \(nextPrayer)".capitalized
-                cell.countDownToNextPrayerLabel.text = "\(timeRemaining?.hour ?? 0)hr \(timeRemaining?.minute ?? 0)min \(timeRemaining?.second ?? 0)sec"
+                let prayerName = "\(nextPrayer)".capitalized
+                cell.nextPrayerNameLabel.text = "until \(prayerName)"
+                cell.createTimer(nextPrayerDate ?? Date())
             } else {
                 let nextPrayerDate = prayers.time(for: Prayer.fajr)
                 let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: nextPrayerDate)!
-                let timeRemaining = PrayerManager.shared.getNextPrayerRemainingTime(nextDate)
                 
                 cell.backgroundImageView.image = UIImage(named: "\(Prayer.fajr)")
-                cell.nextPrayerNameLabel.text = "until \(Prayer.fajr)".capitalized
-                cell.countDownToNextPrayerLabel.text = "\(timeRemaining.hour ?? 0)hr \(timeRemaining.minute ?? 0)min \(timeRemaining.second ?? 0)sec"
+                let prayerName = "\(Prayer.fajr)".capitalized
+                cell.nextPrayerNameLabel.text = "until \(prayerName)"
+                cell.createTimer(nextDate)
             }
         }
         return cell
