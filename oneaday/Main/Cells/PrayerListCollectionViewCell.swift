@@ -42,5 +42,12 @@ final class PrayerListCollectionViewCell: UICollectionViewCell {
         
         let timeRemaining = PrayerManager.shared.getNextPrayerRemainingTime(date ?? Date())
         countDownToNextPrayerLabel.text = "\(timeRemaining.hour ?? 0):\(timeRemaining.minute ?? 0):\(timeRemaining.second ?? 0)"
+        if let hour = timeRemaining.hour, hour > 0, hour < 10, let minute = timeRemaining.minute, minute > 0, minute < 10 {
+            countDownToNextPrayerLabel.text = "0\(timeRemaining.hour ?? 0):0\(timeRemaining.minute ?? 0):\(timeRemaining.second ?? 0)"
+        } else if let minute = timeRemaining.minute, minute > 0, minute < 10 {
+            countDownToNextPrayerLabel.text = "\(timeRemaining.hour ?? 0):0\(timeRemaining.minute ?? 0):\(timeRemaining.second ?? 0)"
+        } else if let hour = timeRemaining.hour, hour > 0, hour < 10 {
+            countDownToNextPrayerLabel.text = "0\(timeRemaining.hour ?? 0):\(timeRemaining.minute ?? 0):\(timeRemaining.second ?? 0)"
+        }
     }
 }
