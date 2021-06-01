@@ -11,9 +11,12 @@ import WidgetKit
 struct PWSmallView: View {
     
     private var prayer: PrayerEntry
+    @State private var timeRemaining = 1000
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     init(prayer: PrayerEntry) {
         self.prayer = prayer
+        timeRemaining = PrayerManager.shared.getNextPrayerRemainingSeconds(prayer.nextPrayerDate).second ?? 10
     }
         
     var body: some View {
@@ -48,6 +51,12 @@ struct PWSmallView: View {
                 }.frame(width: geo.size.width - 32, height: geo.size.height - 32, alignment: .topLeading)
                 .offset(x: 16, y: 25)
             }
+            .onReceive(timer) { time in
+                if self.timeRemaining > 0 {
+                    self.timeRemaining -= 1
+                    WidgetCenter.shared.reloadAllTimelines()
+                }
+            }
         }
     }
 }
@@ -58,4 +67,3 @@ struct PWSmallView_Previews: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
-

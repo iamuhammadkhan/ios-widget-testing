@@ -10,7 +10,7 @@ import UIKit
 final class MainCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nextPrayerNameLabel: UILabel!
-    @IBOutlet private weak var countDownToNextPrayerLabel: UILabel!
+    @IBOutlet weak var countDownToNextPrayerLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var nextPrayerTimeLabel: UILabel!
     
@@ -32,7 +32,6 @@ final class MainCollectionViewCell: UICollectionViewCell {
             return
         }
         seconds -= 1
-        
         let timeRemaining = PrayerManager.shared.getNextPrayerRemainingTime(date ?? Date())
         countDownToNextPrayerLabel.text = "\(timeRemaining.hour ?? 0):\(timeRemaining.minute ?? 0):\(timeRemaining.second ?? 0)"
     }

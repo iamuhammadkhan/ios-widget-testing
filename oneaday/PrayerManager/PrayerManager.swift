@@ -23,6 +23,7 @@ final class PrayerManager: NSObject {
         
     private let formatter: DateFormatter = {
         let fm = DateFormatter()
+        fm.locale = Locale.current
         fm.timeZone = .current
         fm.timeStyle = .short
         return fm
@@ -41,21 +42,22 @@ final class PrayerManager: NSObject {
     }
     
     func getIslamicDate() -> String? {
-        let calendar = Calendar(identifier: .islamicCivil)
         let formatter = DateFormatter()
-        formatter.calendar = calendar
-        formatter.locale = Locale.current
+        let calendar = Calendar(identifier: .islamicCivil)
         formatter.dateFormat = "dd MMMM yyyy"
+        formatter.locale = Locale.current
+        formatter.calendar = calendar
         return formatter.string(from: Date())
     }
     
     func getPrayers(_ location: CLLocation) -> PrayerTimes? {
-        var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        var calendar = Calendar.current
         calendar.locale = Locale.current
         let date = calendar.dateComponents([.year, .month, .day], from: Date())
         let coordinates = Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         var params = CalculationMethod.moonsightingCommittee.params
-        params.madhab = .hanafi
+        params.madhab = .shafi
+        params.method = .ummAlQura
         if let prayerTimess = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
             return prayerTimess
         }

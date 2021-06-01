@@ -13,7 +13,7 @@ final class PrayerListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ishaTimeLabel: UILabel!
     @IBOutlet weak var islamicDateLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet private weak var countDownToNextPrayerLabel: UILabel!
+    @IBOutlet weak var countDownToNextPrayerLabel: UILabel!
     @IBOutlet weak var nextPrayerNameLabel: UILabel!
     @IBOutlet weak var sunriseTimeLabel: UILabel!
     @IBOutlet weak var maghribTimeLabel: UILabel!

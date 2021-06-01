@@ -27,9 +27,9 @@ final class MainViewController: UIViewController {
     }
 
     private func setupViews() {
-        LocationManager.shared.delegate = self
-        collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.dataSource = self
+        LocationManager.shared.delegate = self
         collectionView.register(UINib(nibName: MainCollectionViewCell.identifier, bundle: nil),
                                 forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
         collectionView.register(UINib(nibName: PrayerListCollectionViewCell.identifier, bundle: nil),
@@ -48,10 +48,7 @@ extension MainViewController: LocationManagerDelegate {
             nextPrayer = prayers?.nextPrayer()
             nextPrayerDate = prayers?.time(for: nextPrayer ?? Prayer.fajr)
             nextPrayerTime = PrayerManager.shared.getPrayerTimeString(nextPrayerDate!)
-            
-            print("Countdown:", nextPrayerDate)
             timeRemaining = Calendar.current.dateComponents([.hour, .minute, .second], from: Date(), to: nextPrayerDate!)
-            print("Time remaining", timeRemaining)
         }
         LocationManager.shared.getCityCountry(location) { [weak self] location in
             self?.currentLocation = location
